@@ -10,4 +10,184 @@ Version:  1.0.0
  
 /* =Theme customizations
 ------------------------------------------------------- */
-
+div#et-top-navigation {
+	padding-left: 145px!important;
+	width: 100%;
+}
+.et_mobile_menu li a:hover, .nav ul li a:hover {
+	background-color: transparent;
+}
+#top-menu>li .sub-menu:before, #et-secondary-nav>li .sub-menu:before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 14px 14px 14px;
+	border-color: transparent transparent #f9f9f9 transparent;
+	position: absolute;
+	top: -13px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+#top-menu>li .sub-menu {
+	display: block;
+	width: 260px;
+	border-radius: 5px;
+	-webkit-filter: drop-shadow(0 3px 16px rgba(61, 61, 61, .3));
+	filter: drop-shadow(0 3px 16px rgba(61, 61, 61, .3));
+	left: 50%;
+	top: 30px;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%)
+}
+#main-content .container:before {
+	display: none;
+}
+.et_pb_post {
+	margin-bottom: 25px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.gaya-news {
+	background: #fff;
+}
+.konten-excerpt p.post-meta {
+	padding-left: 0 !important;
+}
+#left-area .post-meta a {
+	color: #FA6601;
+	text-transform: uppercase;
+}
+.gambar-fitur {
+	display: inline-block;
+	max-width: 250px;
+}
+.caption-gambar {
+	color: #787878;
+	border-radius: 0 0 5px 5px;
+	padding: 10px 15px;
+	font-size: 11px;
+	line-height: 1.42;
+	border-bottom: 1px solid #eee
+}
+.konten-excerpt {
+	display: inline-block;
+	width: calc(100% - 270px);
+	margin-left: 10px;
+	margin-bottom: 30px;
+}
+.konten-excerpt .entry-title {
+	font-size: 20px;
+}
+.nc_socialPanel:not(.nc_floater):not(.nc_socialPanelSide) {
+	margin: 0 !important;
+}
+.social-sharing {
+	max-width: 50% !important;
+	float: right;
+	margin: -5px 0 0;
+}
+.wp-pagenavi {
+	border-top: 0;
+	text-align: center;
+	padding: 0px 0 25px!important;
+}
+.wp-pagenavi a {
+	color: #279BD5;
+	font-weight: 600 !important;
+}
+#main-content {
+	background-color: #f9f9f9;
+}
+.et_post_meta_wrapper, .entry-content {
+	background: #fff;
+}
+.konten-artikel {
+	max-width: 500px;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 1.8;
+	padding: 5px 10px 40px;
+}
+.entry-title.pos-tunggal, #comment-wrap {
+	padding: 15px;
+}
+#left-area .post-meta {
+	padding: 5px 15px;
+	font-size: 12px;
+}
+.wp-pagenavi .current, .wp-pagenavi .nextpostslink {
+	background: #279BD5;
+	color: #fff !important;
+	padding: 8px 10px;
+	font-size: 14px !important;
+	font-weight: 600 !important;
+}
+.et_right_sidebar #left-area {
+	padding-right: 0%;
+	margin-right: 2%;
+	width: 68%!important
+}
+#submit.submit.et_pb_button {
+	color: #ffffff !important;
+	border-width: 10px !important;
+	border-color: #279BD5;
+	border-radius: 100px;
+	letter-spacing: 1px;
+	font-size: 16px;
+	font-weight: 700 !important;
+	text-transform: uppercase !important;
+	padding-left: 0.7em;
+	padding-right: 2em;
+	background-color: #279BD5;
+	box-shadow: 0px 3px 10px 1px rgba(39, 155, 213, 0.6);
+}
+.et_right_sidebar #sidebar {
+	padding-left: 2%;
+	background: #fff;
+	padding: 15px;
+}
+#sidebar .et_pb_widget {
+	margin-bottom: 10px;
+}
+#footer-bottom {
+	padding: 25px 0 15px;
+}
+ #footer-info a {
+	color: inherit;
+	font-weight: inherit;
+}
+#menu-menu-footer {
+    float: right;
+    padding: 0;
+}
+.bottom-nav li {
+	font-size: 13px;
+	font-weight: normal;
+	text-align: center;
+}
+@media all and (max-width:980px) {
+.container {
+	width: 100%;
+}
+#menu-menu-footer {
+    display: block;
+ float: none;
+}
+.gambar-fitur, .konten-excerpt {
+	display: block;
+	width: 100%;
+}
+.et_right_sidebar #left-area {
+	padding-right: 0%;
+	margin-right: 0;
+	width: 100%!important
+}
+a.comment-reply-link.et_pb_button {
+	border: 1px solid #999;
+	background: #f9f9f9;
+	font-size: 17px;
+	font-weight: 500;
+	color: #777;
+}
