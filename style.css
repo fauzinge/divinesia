@@ -1,16 +1,16 @@
 /*
 Theme Name: Divinesia
-Description: Child Theme Divi dari Divinesia (Divi Mania Indonesia)
+Description: Divi Child Theme dari Divinesia Indonesia
 Author:  Torikul Fauzi
 Author URI:  https://www.puskomedia.id
 Template: Divi
-Version:  1.0.0
+Version:  1.0.1
 */
 
  
-/* =Theme customizations
+/* =Kostumasi tema
 ------------------------------------------------------- */
-div#et-top-navigation {
+#et-top-navigation {
 	padding-left: 145px!important;
 	width: 100%;
 }
@@ -45,9 +45,19 @@ div#et-top-navigation {
 #main-content .container:before {
 	display: none;
 }
-.et_pb_post {
+#sidebar {
+	width: 30%;
+}
+#sidebar .et_pb_widget{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.gaya-news .et_pb_post {
 	margin-bottom: 25px;
 	border-bottom: 1px solid #e5e5e5;
+}
+.et_pb_post .entry-featured-image-url {
+	margin-bottom: 0;
 }
 .gaya-news {
 	background: #fff;
@@ -73,12 +83,15 @@ div#et-top-navigation {
 }
 .konten-excerpt {
 	display: inline-block;
+	float: right;
 	width: calc(100% - 270px);
 	margin-left: 10px;
-	margin-bottom: 30px;
 }
 .konten-excerpt .entry-title {
 	font-size: 20px;
+}
+.et_pb_post .entry-content {
+	border-bottom: 1px solid #e5e5e5;
 }
 .nc_socialPanel:not(.nc_floater):not(.nc_socialPanelSide) {
 	margin: 0 !important;
@@ -103,7 +116,7 @@ div#et-top-navigation {
 .et_post_meta_wrapper, .entry-content {
 	background: #fff;
 }
-.konten-artikel {
+#left-area .konten-artikel {
 	max-width: 500px;
 	margin: 0 auto;
 	font-size: 16px;
@@ -176,8 +189,43 @@ a.comment-reply-link.et_pb_button {
 	text-align: center;
 }
 @media all and (max-width:980px) {
+    #mobile_menu.et_mobile_menu {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 9998;
+    overflow: scroll !important;
+    background-color: #fff !important;
+    padding: 70px 30px;
+    height: 100%;
+    width: 100vw;
+    border-top: 0
+}
+.mobile_nav.opened .mobile_menu_bar:before {
+    content: "\4d";
+    color: #3d3d3d;
+    z-index: 99999
+}
+.mobile_menu_bar.mobile_menu_bar_toggle {
+    padding-right: 10px;	
+}
+.et_header_style_left .logo_container {
+    width: 100%;
+    padding-left: 10px;
+}
+#et_top_search {
+    float: right;
+    padding-right:40%;
+    margin: 0;
+}
+span.et_close_search_field {
+padding-right: 10%;
+	}
 .container {
 	width: 100%;
+}
+#main-content .container {
+padding-top: 15px;
 }
 #menu-menu-footer {
     display: block;
@@ -187,8 +235,45 @@ a.comment-reply-link.et_pb_button {
 	display: block;
 	width: 100%;
 }
+.gaya-news .et_pb_post {
+	padding: 0 20px;
+}
+.konten-excerpt {
+float: none;
+padding-bottom: 20px;
+}
 .et_right_sidebar #left-area {
 	padding-right: 0%;
 	margin-right: 0;
 	width: 100%!important;
+}
+}
+#main-header .et_mobile_menu .menu-item-has-children > a {
+    background-color: transparent; 
+    position: relative; 
+}
+#main-header .et_mobile_menu .menu-item-has-children > a:after {
+    font-family: 'ETmodules'; 
+    text-align: center; 
+    speak: none; 
+    font-weight: normal; 
+    font-variant: normal; 
+    text-transform: none; 
+    -webkit-font-smoothing: antialiased; 
+    position: absolute; 
+}
+#main-header .et_mobile_menu .menu-item-has-children > a:after { 
+    font-size: 16px; content: '\4c'; top: 13px; right: 10px;
+}
+#main-header .et_mobile_menu .menu-item-has-children.visible > a:after {
+    content: '\4d'; 
+}
+#main-header .et_mobile_menu ul.sub-menu { 
+    display: none !important; 
+    visibility: hidden !important; 
+    transition: all 1.5s ease-in-out;
+}
+#main-header .et_mobile_menu .visible > ul.sub-menu { 
+    display: block !important; 
+    visibility: visible !important;
 }
