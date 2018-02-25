@@ -1,12 +1,12 @@
 <?php
 /**
- * Fungsi penyesuaian untuk tema saat ini.
+ * Custom Functions file for current theme.
  *
  */
 
-// IMPORT STYLE INDUK
+// IMPORT PARENT STYLE
 function child_theme_enqueue_styles() {
-    $parent_style = 'divi-style'; // Style 'divi-style' untuk divinesia child theme.
+    $parent_style = 'divi-style'; // This is 'divi-style' for the Divi theme.
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'child-style',
         get_stylesheet_directory_uri() . '/style.css',
@@ -16,26 +16,18 @@ function child_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'child_theme_enqueue_styles' );
 
-/* Fungsi untuk mengganti jumlah excerpt pada modul blog
-       lihat pada folder 'custom-modules/cbm.php' */
-function divi_child_theme_setup() {
-    if ( ! class_exists('ET_Builder_Module') ) {
-        return;
-    }
- 
-   get_template_part( 'custom-modules/cbm' );
- 
-    $cbm = new Custom_ET_Builder_Module_Blog();
- 
-    remove_shortcode( 'et_pb_blog' );
- 
-    add_shortcode( 'et_pb_blog', array($cbm, '_shortcode_callback') );
- 
-}
-add_action( 'wp', 'divi_child_theme_setup', 9999 );
+// Load javascript mobile menu
+add_action( 'wp_enqueue_scripts', 'menu_scripts' );
+function menu_scripts() {
+wp_enqueue_script( 'responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
+wp_enqueue_script(
+    'custom-script',
+    get_stylesheet_directory_uri() . '/js/dvns-mobile-menu.js',
+    array( 'jquery' )
+);
+        }
 
-/* Fungsi untuk mengubah lebar x tinggi thumbnail
-       pada loop/ arsip blog */
+// Fungsi untuk mengubah lebar x tinggi thumbnail
 function dva_index_thumbnail_width( $width ) {
 	if( !is_single() ) {
 	 	return 400; //index thumbnail width dalam pixels
@@ -53,5 +45,4 @@ function dva_index_thumbnail_height( $height ) {
 	}
 }
 add_filter( 'et_pb_index_blog_image_height', 'dva_index_thumbnail_height');
-
 ?>
