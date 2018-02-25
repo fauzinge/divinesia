@@ -9,3 +9,5 @@ Tema ini saya kembangkan untuk memenuhi kebutuhan pengembangan web tema
 1. Gaya arsip blog > kiri gambar fitur, kanan excerpt;
 2. Menu header rata kiri, float kiri;
 3. Menu footer dipindah sejajar dengan copyright text - sosial media.
+
+Info: https://divinesia.id/child-themes
